@@ -39,7 +39,6 @@ public class RetrofitActivity extends AppCompatActivity {
             public void onResponse(Call<List<Category>> call, Response<List<Category>> response) {
                 if (response.isSuccessful()) {
                     categoryList = response.body(); // Nhận danh sách dữ liệu
-
                     // Khởi tạo Adapter
                     categoryAdapter = new CategoryAdapter(RetrofitActivity.this, categoryList);
                     rcCate.setHasFixedSize(true);
@@ -65,5 +64,7 @@ public class RetrofitActivity extends AppCompatActivity {
             }
         });
     }
+
+
 }
 
